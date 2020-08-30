@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+    <style type="text/css">
+        @media only screen and (min-width:500px){
+                .dropdown:hover .dropdown-menu{
+                display:block;
+            }
+        }  
+    </style>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	function toggleLogout(button_id) 
+	{
+		var el = document.getElementById(button_id);
+		var image = document.getElementById('myImage');
+		
+		if (el.innerText == "Logout") 
+		{
+			el.innerText = "Login";
+			image.src = "User-Guest.svg";
+		}
+		else 
+		{
+			$('#loginModal').modal('toggle')	
+		}
+		
+		
+	}
+	function toggleLogin() 
+	{
+		var el = document.getElementById('myButton');
+		var image = document.getElementById('myImage');
+		
+		if (el.innerText == "Login") 
+		{
+			el.innerText = "Logout";
+			image.src = "Alan.jpg";
+		}
+		
+	}
+	function TableShow() 
+	{
+		var targettable = document.getElementById('ResultsTable');
+		var searchposition = document.getElementById('SearchLine');
+
+		if (targettable.style.display == "inline") 
+		{
+			targettable.style.display = 'none';
+
+			
+		}
+		else 
+		{
+			targettable.style.display = 'inline';
+			
+
+		}
+	}
+</script>
+</head>
+<body>
+
+<!-- loginModal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<form>
+			<div class = "form-group">
+				<label for = "exampleInputEmail">Email address</label>
+				<input type = "email" class="form-control" id="exampleInputEmail" aria-describdy= "emailHelp" placeholder="email">
+				<small id="emailHelp" class="form-text text-muted">Enter your mail</small>
+			</div>
+			<div class = "form-group">
+				<label for = "exampleInputPass">Email address</label>
+				<input type = "password" class="form-control" id="exampleInputEmail" placeholder="password">
+				<small id="passHelp" class="form-text text-muted">Password help frase</small>
+			</div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="submit" class="btn btn-dark" data-dismiss="modal" onClick="toggleLogin()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+	<div class="collapse navbar-collapse w-100" id="navbarMenu">
+		<a class="navbar-brand" href="Home_Page.html">
+			<img src="royal_arch_nz_logo.png" width="65" height="65" alt="">
+		</a>
+		<ul class="navbar-nav ">
+			<li><a class="navbar-brand" href="Members_Search_Page.html">Members</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Organisation
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Organisation search</a>
+					<a class="dropdown-item" href="Dergee_edit.html">Degrees</a>
+					<a class="dropdown-item" href="#">Offices</a>
+					<a class="dropdown-item" href="#">Locations</a>
+					<a class="dropdown-item" href="#">Ceremonial</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Regalia
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Regalia</a>
+					<a class="dropdown-item" href="#">Awards</a>
+					<a class="dropdown-item" href="#">Jewels</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Civic Honour</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					System
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Chronology</a>
+					<a class="dropdown-item" href="#">Glossary</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Application Help<a>
+					<a class="dropdown-item" href="#">Login History</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <img src="Alan.jpg" id="myImage" width="65" height="65" alt="">
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn menuBtn" id="myButton" onClick="toggleLogout(this.id)">
+					Logout
+				</button>				
+            </li>
+        </ul>
+        
+	</div>
+</nav>
+<div class="Container">
+	<div class="leftSide" id="SearchLine">
+		<div class="row">
+			<div class="input-group input-group-lg">
+				<div class="col-sm-4">
+					<p>Look for member by surname.</p>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
+				</div>
+				<div class="col-sm-4">
+						<button class="btn btn-outline btn-dark" type="button" onClick="TableShow()">Search</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-group input-group-lg">
+				<div class="col-sm-4">
+					<p>Look for member by member Id.</p>
+				</div>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-lg">
+				</div>
+				<div class="col-sm-4">
+						<button class="btn btn-outline btn-dark" type="button" >Edit</button>
+						<button class="btn btn-outline btn-dark" type="button" >View</button>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="leftSidelower" id="ResultsTable">
+		
+		<table class="table" >
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Order</th>
+      <th scope="col">Action</th>
+	  <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">452</th>
+      <td>Smith,Kevin</td>
+      <td>1</td>
+      <td><a class="btn btn-dark" href="Members_details.html" role="button">Edit</a></td>
+	  <td><button class="btn btn-outline btn-dark" type="button">View</button></td>
+
+    </tr>
+    <tr>
+      <th scope="row">877</th>
+      <td>Smith,George</td>
+      <td>1</td>
+      <td><button class="btn btn-outline btn-dark" type="button">Edit</button></td>
+	  <td><button class="btn btn-outline btn-dark" type="button">View</button></td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td>Smith, Will</td>
+      <td>1</td>
+      <td><button class="btn btn-outline btn-dark" type="button">Edit</button></td>
+	  <td><button class="btn btn-outline btn-dark" type="button">View</button></td>
+    </tr>
+  </tbody>
+</table>
+	</div>
+</div>
+</body>
+</html>
