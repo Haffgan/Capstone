@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<!-- loginModal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<form>
+			<div class = "form-group">
+				<label for = "exampleInputEmail">Email address</label>
+				<input type = "email" class="form-control" id="exampleInputEmail" aria-describdy= "emailHelp" placeholder="email">
+				<small id="emailHelp" class="form-text text-muted">Enter your mail</small>
+			</div>
+			<div class = "form-group">
+				<label for = "exampleInputPass">Email address</label>
+				<input type = "password" class="form-control" id="exampleInputEmail" placeholder="password">
+				<small id="passHelp" class="form-text text-muted">Password help frase</small>
+			</div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="submit" class="btn btn-dark" data-dismiss="modal" onClick="toggleLogin()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+	<div class="collapse navbar-collapse w-100" id="navbarMenu">
+		<a class="navbar-brand" href="Home_Page.php">
+			<img src="content/royal_arch_nz_logo.png" width="65" height="65" alt="">
+		</a>
+		<ul class="navbar-nav ">
+			<li><a class="navbar-brand" href="Members_Search_Page.php">Members</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Organisation
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Order</a>
+					<a class="dropdown-item" href="#">Division</a>
+					<a class="dropdown-item" href="#">District</a>
+					<a class="dropdown-item" href="#">Group</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Office</a>
+					<a class="dropdown-item" href="#">Degrees</a>
+					<a class="dropdown-item" href="#">Rank</a>
+					<a class="dropdown-item" href="#">Locations</a>			
+				</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Tribute
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Regalia</a>
+					<a class="dropdown-item" href="#">Awards</a>
+					<a class="dropdown-item" href="#">Jewels</a>
+					<a class="dropdown-item" href="#">Ceremonials</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Civic Honour</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Information
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Chronology</a>
+					<a class="dropdown-item" href="#">Glossary</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Application Help<a>
+					<a class="dropdown-item" href="#">Login History</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button type="button" class="btn menuBtn" style="margin: 12px;" id="myButton" onClick="toggleLogout(this.id)">
+					Login
+				</button>	
+            <li class="nav-item">
+                <img src="User-Guest.svg" id="myImage" class="rounded-circle" width="65" height="65" alt="">
+            </li>				
+            </li>
+        </ul>
+        
+	</div>
+</nav>
+
+
+</body>
+</html>
