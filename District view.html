@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+    <style type="text/css">
+        @media only screen and (min-width:500px){
+                .dropdown:hover .dropdown-menu{
+                display:block;
+            }
+        }  
+    </style>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	function toggleLogout(button_id) 
+	{
+		var el = document.getElementById(button_id);
+		var image = document.getElementById('myImage');
+		
+		if (el.innerText == "Logout") 
+		{
+			el.innerText = "Login";
+			image.src = "User-Guest.svg";
+		}
+		else 
+		{
+			$('#loginModal').modal('toggle')	
+		}
+		
+		
+	}
+	function toggleLogin() 
+	{
+		var el = document.getElementById('myButton');
+		var image = document.getElementById('myImage');
+		
+		if (el.innerText == "Login") 
+		{
+			el.innerText = "Logout";
+			image.src = "Alan.jpg";
+		}
+		
+	}
+	function TableShow() 
+	{
+		var targettable = document.getElementById('ResultsTable');
+		var searchposition = document.getElementById('SearchLine');
+
+		if (targettable.style.display == "inline") 
+		{
+			targettable.style.display = 'none';
+
+			
+		}
+		else 
+		{
+			targettable.style.display = 'inline';
+			
+
+		}
+	}
+</script>
+</head>
+<body>
+
+<!-- 
+	<?php include "./NavbarHeader.html"?>	
+ -->
+
+
+<h2 style="text-align:center; color:black" > District view page </h2>
+	
+
+
+	<div class="col-4">
+		<label style="text-align:center; color:transparent" for="exampleFormControlTextarea1"> _</label>
+		<table class="table table-bordered">
+
+			<tbody>
+			  <tr>
+				<th scope="row">Order Name </th>
+				<td> Grand Council of Cryptic Masonry of New Zealand </td>
+
+			  </tr>
+			  <tr>
+				<th scope="row">Division Name</th>
+				<td>Northern Division</td>
+
+			  </tr>
+			  <tr>
+				<th scope="row">District Name</th>
+				<td>Auckland District</td>
+
+			  </tr>
+
+			  <tr>
+				<th scope="row">Map File Name</th>
+				<td>MapFile.jpg</td>
+
+			  </tr>
+			
+
+			</tbody>
+		  </table>
+	</div>
+<div class="col-4">
+	<label for="exampleFormControlTextarea1"> Describtion</label>
+	<textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+	
+  </div>
+	<div class="col-4">
+
+
+	<div style="text-align:center">
+		<img src="map file.jpg" class="memberImage">
+
+	</div></div>
+
+	<div style="text-align:center"><button class="btn-ed btn-outline btn-dark" type="button">Edit</button></div>
+	
+
+
+
+	
+
+</body>
+</html>
